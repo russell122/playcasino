@@ -1,0 +1,160 @@
+/* ------------------------------------- 
+ Common styles 
+ ------------------------------------- */
+.main-wrapper
+	display: flex
+	flex-direction: column
+	min-height: 100vh
+	.page
+		flex: 1
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none)
+	.main-wrapper
+		display: block
+
+.container
+	width: 100%
+	padding-right: 15px
+	padding-left: 15px
+	margin-right: auto
+	margin-left: auto
+
+@media (min-width: 576px)
+	.container
+		max-width: 540px
+
+@media (min-width: 768px)
+	.container
+		max-width: 758px
+
+@media (min-width: 992px)
+	.container
+		max-width: 960px
+
+@media (min-width: 1200px)
+	.container
+		max-width: 1200px
+
+.flex
+	display: flex
+	flex-wrap: wrap
+
+.img
+	display: block
+	max-width: 100%
+	height: auto
+
+.nowrap
+	white-space: nowrap
+
+.text-center
+	text-align: center
+
+.list
+	margin: 0
+	padding: 0
+	list-style: none
+
+/* ---------- Titles & text ---------- */
+.title1
+
+/* ----- Кнопки ----- */
+.button
+	display: inline-flex
+	align-items: center
+	justify-content: center
+	width: 252px
+	height: 52px
+	padding-top: 2px
+	font-size: 16px
+	line-height: 1
+	text-transform: uppercase
+	color: $white
+	position: relative
+	z-index: 1
+	cursor: pointer
+	overflow: hidden
+	@include trs(.1s)
+
+/* ----- Forms ----- */
+
+*::placeholder
+	color: rgba($text-color, .5)
+	opacity: 1
+	@include trs(.1s)
+
+body input:focus:required:invalid, body textarea:focus:required:invalid,
+body input:required:valid, body textarea:required:valid
+	color: $text-color
+
+.input
+	display: block
+	width: 100%
+	min-width: 1px
+	height: 45px
+	padding: 16px 15px 14px 15px
+	background-color: #eee
+	border: 1px solid #f4f4f4
+	font-size: 14px
+	@include trs(.1s)
+	&:focus
+		outline: none
+
+.card
+	// align-content: flex-start
+	&__wrap
+		display: flex
+		flex-wrap: wrap
+	&__elem
+		flex: 0 1 25%
+		padding: 0 15px
+		@media (max-width: 1200px)
+			flex: 0 1 50%
+		@media (max-width: 576px)
+			flex: 0 1 100%
+	img
+		width: 100%
+		display: block
+		object-fit: cover
+	&-img
+		border-radius: 10px
+		overflow: hidden
+		background-color: #242424
+		margin-bottom: 20px
+		display: block
+
+.g__title
+	font-size: 31px
+	text-transform: uppercase
+	text-align: center
+	margin-bottom: 40px
+	@media (max-width: 1200px)
+		font-size: 25px
+	@media (max-width: 992px)
+		font-size: 22px
+	@media (max-width: 768px)
+		font-size: 18px
+.g__text
+	font-size: 31px
+.g__sub-title
+	font-size: 31px
+	font-weight: 700
+.g__btn
+	text-align: center
+	font-size: 28px
+	text-transform: uppercase
+	background-color: #989898
+	padding: 18px 0
+	display: block
+	width: 100%
+	border-radius: 10px
+	margin-bottom: 40px
+	transition: all ease .2s
+	&:hover
+		color: #fff
+		background-color: #888888
+	&:active
+		transform: translateY(2px)
+	@media (max-width: 1300px)
+		font-size: 18px
+		padding: 14px 0
+// @include max-screen($xl)

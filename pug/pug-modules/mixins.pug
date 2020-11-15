@@ -1,0 +1,17 @@
+//-
+	mixin pet(name)
+	li.pet= name
+
+mixin card(accordion = false)
+	.card__elem
+		a(href="#").card-img
+			img(src="img/cards__img.png", alt="")
+		if(accordion)
+			.card-accordion
+				ul
+					li 1
+					li 2
+					li 3
+
+				span Rating casino riobet 100%
+		a(href="#").g__btn Обзор казино
